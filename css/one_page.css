@@ -1,0 +1,223 @@
+@font-face {
+    font-family: Apercu;
+    src: url("fonts/ApercuRegular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Apercu;
+    font-weight: bold;
+    src: url("fonts/ApercuBold.otf") format("opentype");
+}
+
+.container, #loader {
+  display: none
+}
+
+#overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -99;
+  background-color: #200;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 60s opacity;
+    filter: brightness(40%) sepia(80%) contrast(150%) blur(3px);
+}
+
+#reload {
+  position: fixed;
+  top:95vh;
+  left:0vw;
+  width: 5vh;
+  height: 5vh;
+  background: transparent;
+  z-index: 999;
+}
+
+.size-guide {
+  position: fixed;
+  display: none;
+}
+
+.x, .y, .x-extra, .y-extra {
+  top: 0;
+  left: 0;
+}
+
+.size-guide.x {
+  width: 52.6315789474vh;
+  height: 10px;
+  z-index: 50;
+  background: #0f0;
+}
+
+.size-guide.x-extra {
+  width: 57.6315789474vh;
+  height: 10px;
+  z-index: 49;
+  background: #f00;
+}
+
+.size-guide.y {
+  height: 190vw;
+  width: 10px;
+  z-index: 51;
+  background: #0f0;
+}
+
+.size-guide.y-extra {
+  height: 195vw;
+  width: 10px;
+  z-index: 48;
+  background: #f00;
+}
+
+.ada-top,.ada-bottom {
+  height: 0.1vh;
+  width: 100vw;
+  background-color: #00f;
+}
+
+.ada-top {
+  left: 0;
+  top: 40vh
+}
+
+.ada-bottom {
+  left: 0;
+  top: 74vh;
+}
+
+.avg-top,.avg-bottom {
+  height: 0.1vh;
+  width: 100vw;
+  background-color: #0ff;
+}
+
+.avg-top {
+  left: 0;
+  top: 25vh
+}
+
+.avg-bottom {
+  left: 0;
+  top: 58vh;
+}
+
+
+.floating-menu {
+  background: transparent;
+  padding: 5px;
+  width: 10vw;
+  z-index: 100;
+  position: fixed;
+  top: 42vh;
+}
+
+.floating-menu.right {
+  right: 5%;
+}
+
+.floating-menu.left {
+  left: 5%;
+}
+
+.floating-menu a {
+  height: 3.7vw;
+  width: 13vw;
+  background: rgba(255,255,255,0.9);
+  margin-bottom: 20%;
+  display: block;
+  border-radius: 3.7vw;
+}
+
+.floating-menu img {
+  width: 2vw;
+  height: 2vw;
+  margin: 0.875vw 0.25vw 0.875vw 0.875vw;
+  display: inline;
+  }
+
+.floating-menu .label {
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  top: -0.9em;
+  font-size: .85vh
+  }
+
+.floating-menu .inactive {
+  opacity: 0.1
+}
+
+.floating-menu .spacer {
+  height: 2.5vh;
+  opacity: 0;
+}
+
+.unmuted .mute_on {
+  display: none;
+}
+
+.muted .mute_off {
+  display: none;
+}
+
+.paused .pause_it {
+  display: none;
+}
+
+.playing .play_it {
+  display: none;
+}
+
+.miracles_section .back_mis,
+.missionaries_section .back_mir,
+.menu .previous_button,
+.menu .next_button {
+  display: none;
+}
+
+#loader {
+  width: 400px;  /* SVG Animations are easier to work with as PX sizes. */
+  height: 400px;
+  margin: 33vh auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.section-menu {
+  padding-top: 15vh;
+  margin-top: 15vh;
+  padding-bottom: 15vh;
+  margin-bottom: 15vh;
+}
+
+.premute {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.premute img {
+  width: 2vh;
+  height: 2vh;
+  filter: invert(1.0);
+}
